@@ -1,0 +1,201 @@
+
+import Foundation
+
+
+
+//create an array of product names and another array of product prices let the user decide how many products are there and then fill both arrays from the user input then let the user enter a product name. find if it exists then show its price and ask the user about the quantity he wants to buy. then find the total and add 13% as tax and print out the next amount. but if not exist show a message saying that. and then print out the name of the most expensive product and its price. you must use functions in reading and filling both arrays. searching for the product and finding the index of the most expensive product.
+
+
+
+func productsReading(product: inout [String], price: inout [Double],n:Int) {
+
+    //inout converts constants into variables
+
+    for _ in 0..<n {
+
+        print("Enter the product")
+
+        // add to the array by using append
+
+        product.append(readLine()!)
+
+        print("Enter the product price")
+
+        price.append(Double(readLine()!)!)
+
+    }
+
+}
+
+// function finds the product by name and returns its index
+
+func searchByName(product: [String], name: String) -> Int {
+
+    for i in 0..<product.count {
+
+        if name == product[i] {
+
+            return i
+
+        }
+
+    }
+
+    return -1
+
+}
+
+//function finds the product by name and returns its price
+
+func priceByName(product: [String], name: String, price: [Double]) -> Double {
+
+    for i in 0..<product.count {
+
+        if name == product[i] {
+
+            return price[i]
+
+        }
+
+    }
+
+     return -1
+
+}
+
+
+
+//function to find the and return the average of prices of all products
+
+func average(product: [String], price: [Double]) {
+
+    var sum = 0
+
+
+
+    for _ in 0..<product.count {
+
+        sum = Int(price.reduce(0, +))
+
+        
+
+    }
+
+    let avg : Double = Double(sum) / Double(product.count)
+
+    print("The average of prices is : \(avg)")
+
+}
+
+//function to increase the prices of all products which less than 30$ by 10% and print their names and new prices
+
+func increase(product: [String], price: [Double]) {
+
+    for i in 0..<product.count {
+
+        if price[i] < 30 {
+
+            let new = price[i] + ((price[i] * 0.10))
+
+            print("Product name  \(product[i]) and Increased price \(new)")
+
+        }
+
+       
+
+    }
+
+}
+
+
+
+print("Hou many products you have?")
+
+let n = Int(readLine()!)!
+
+
+
+//create an empty array in swift
+
+var product = [String]()
+
+var price = [Double]()
+
+//call / getting the user inputs into array
+
+productsReading(product: &product, price: &price, n:n)
+
+
+
+//call / getting the new increased price of the product
+
+increase(product: product, price: price)
+
+
+
+//call / getting the average of all the prices
+
+average(product: product, price: price)
+
+
+
+//we put & because its an array
+
+print("Enter the name of the product you want to buy")
+
+var name = readLine()!
+
+
+
+//getting the index of the required product
+
+var p = searchByName(product: product, name: name)
+
+if p == -1 {
+
+    print("The required product does not exist")
+
+}
+
+else {
+
+    print("The price of the product is \(price[p])")
+
+    print("Enter the required quantity")
+
+    let qty = Double(readLine()!)!
+
+    let total = price[p] * qty * 1.13
+
+    print("The total price is : \(total)")
+
+    
+
+}
+
+//getting the price of the required product
+
+
+
+var pr = priceByName(product: product, name: name, price: price)
+
+if pr == -1 {
+
+    print("The required product does not exist")
+
+}
+
+else {
+
+    print("The price of the product is \(pr)")
+
+    print("Enter the required quantity")
+
+    let qty = Double(readLine()!)!
+
+    let total = pr * qty * 1.13
+
+    print("The total price is : \(total)")
+
+}
+
