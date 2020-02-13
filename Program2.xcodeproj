@@ -1,0 +1,92 @@
+
+
+import Foundation
+//we have numbers of students, and we need to enter their names, grades in swift. let the user input their names, grades. every time after entering, ask the user if they want to enter more. Then show the user a menu with these options
+//0. to stop
+//1. search for a student by name
+//2. print all names of student who pass
+//3. print the name and grade of student who gets the max grade
+// and accept the user choice and do upon the choice, then show the menu again and so on until the user enters 0
+
+//function to read user input
+func readStudents(name : inout [String], marks : inout [Int], size : Int) {
+    for _ in 0..<size {
+        print("Enter the name of the student")
+        name.append(readLine()!)
+        print("Enter the marks")
+        marks.append(Int(readLine()!)!)
+    }
+}
+//function to show menu to the user
+func showMenu() -> Int {
+    print("1. Search for a student by name")
+    print("2. Print all names of the students who pass")
+    print("3. Print the name and grade of student who gets the max grade")
+    let choice = Int(readLine()!)!
+    return choice
+}
+func searchByName(name : [String], marks : [Int]) {
+  
+    for i in 0..<name.count {
+        print("Enter the name of the student you want to search")
+        let sname = readLine()
+        if sname == name[i] {
+            print("Student available = \(name[i]) and grade = \(marks[i])")
+            //print("grade = \(grade[i])")
+        }
+        
+    }
+}
+func passingStudent(name : [String], marks: [Int]) {
+    for i in 0..<name.count {
+        if marks[i] > 50{
+            print("Passing Student")
+            print("Name = \(name[i])")
+        }
+    }
+}
+func maxGrade(name : [String], marks : [Int]) {
+    var max = marks[0]
+    for i in 0..<marks.count {
+        if marks[i] > max {
+            max = marks[i]
+        }
+    }
+    print("Maximum marks = : \(max)")
+}
+var size = 2
+
+//create an empty array in swift
+var name = [String]()
+var marks =  [Int]()
+
+//calling / getting details into array
+readStudents(name: &name, marks: &marks, size: size)
+print("Want to enter more?")
+    var ans = readLine()
+if ans == "yes"{
+    readStudents(name: &name, marks: &marks, size: size)
+}
+else{
+    //showing menu to the user
+    
+    do{
+        var choice : Int
+        choice = showMenu()
+        switch(choice) {
+        case 1:
+            searchByName(name: name, marks: marks)
+            //searchByName(name: name, marks: marks)
+            break
+        case 2:
+            passingStudent(name: name, marks: marks)
+            break
+        case 3:
+            maxGrade(name: name, marks: marks)
+        default:
+            print("Wrong choice! Try again")
+        }
+    }
+}
+
+
