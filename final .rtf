@@ -1,0 +1,268 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red252\green95\blue163;\red31\green31\blue36;\red255\green255\blue255;
+\red108\green121\blue134;\red65\green161\blue192;\red208\green168\blue255;\red208\green191\blue105;\red161\green103\blue230;
+\red252\green106\blue93;\red103\green183\blue164;\red103\green183\blue164;}
+{\*\expandedcolortbl;;\csgenericrgb\c98839\c37355\c63833;\csgenericrgb\c12054\c12284\c14131;\csgenericrgb\c100000\c100000\c100000\c85000;
+\csgenericrgb\c42394\c47462\c52518;\csgenericrgb\c25490\c63137\c75294;\csgenericrgb\c81681\c65692\c99927;\csgenericrgb\c81498\c74939\c41233;\csgenericrgb\c63137\c40392\c90196;
+\csgenericrgb\c98912\c41558\c36568;\csgenericrgb\c40392\c71765\c64314;\csgenericrgb\c40538\c71705\c64209;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab593
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf2 \cb3 import
+\f1\b0 \cf4  Foundation\
+\
+\cf5 //reading values for movies\cf4 \
+
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf6 moviesf\cf4 (mno : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 Int\cf4 ], myear : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 Int\cf4 ], mCinema :
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 String\cf4 ], mIncome : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 Double\cf4 ], mtitle : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 String\cf4 ])  \{\
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  i 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 0\cf4  \{\
+        \cf9 print\cf4 (\cf10 "Enter the movie no for movie \cf4 \\(i)\cf10 "\cf4 )\
+        mno.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+        \cf9 print\cf4 (\cf10 "Enter the title of the movie"\cf4 )\
+        mtitle.\cf9 append\cf4 (\cf9 readLine\cf4 ()!)\
+        \cf9 print\cf4 (\cf10 "Enter the year of the movie"\cf4 )\
+        myear.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+        
+\f0\b \cf2 for
+\f1\b0 \cf4  j 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 2\cf4  \{\
+            \cf9 print\cf4 (\cf10 "Enter the name of Cinema \cf4 \\(j)\cf10 "\cf4 )\
+            mCinema.\cf9 append\cf4 (\cf9 readLine\cf4 ()!)\
+            \cf9 print\cf4 (\cf10 "Enter the income of Cinema \cf4 \\(j)\cf10 "\cf4 )\
+            mIncome.\cf9 append\cf4 (\cf7 Double\cf4 (\cf9 readLine\cf4 ()!)!)\
+        \}\
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  i 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 1\cf9 ...\cf8 1\cf4  \{\
+    \cf9 print\cf4 (\cf10 "Enter the movie no for movie \cf4 \\(i)\cf10 "\cf4 )\
+    mno.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+    \cf9 print\cf4 (\cf10 "Enter the title of the movie"\cf4 )\
+    mtitle.\cf9 append\cf4 (\cf9 readLine\cf4 ()!)\
+    \cf9 print\cf4 (\cf10 "Enter the year of the movie"\cf4 )\
+    myear.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  j 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 1\cf4  \{\
+        \cf9 print\cf4 (\cf10 "Enter the name of Cinema \cf4 \\(j)\cf10 "\cf4 )\
+        mCinema.\cf9 append\cf4 (\cf9 readLine\cf4 ()!)\
+        \cf9 print\cf4 (\cf10 "Enter the income of Cinema \cf4 \\(j)\cf10 "\cf4 )\
+        mIncome.\cf9 append\cf4 (\cf7 Double\cf4 (\cf9 readLine\cf4 ()!)!)\
+    \}\
+        \}\}\
+\}\
+\
+\cf5 //reading values for series\cf4 \
+
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf6 seriesf\cf4 (sno : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 Int\cf4 ], stitle : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 String\cf4 ], syear :
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 Int\cf4 ], sepisodes : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 Int\cf4 ], schannels : 
+\f0\b \cf2 inout
+\f1\b0 \cf4  [\cf7 Int\cf4 ])  \{\
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  i 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 2\cf4  \{\
+        \cf9 print\cf4 (\cf10 "Enter the series no for series \cf4 \\(i)\cf10 "\cf4 )\
+        sno.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+        \cf9 print\cf4 (\cf10 "Enter the title of the series"\cf4 )\
+        stitle.\cf9 append\cf4 (\cf9 readLine\cf4 ()!)\
+        \cf9 print\cf4 (\cf10 "Enter the year of the series"\cf4 )\
+        syear.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+        \cf9 print\cf4 (\cf10 "Enter the no of episodes "\cf4 )\
+        sepisodes.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+        \cf9 print\cf4 (\cf10 "Enter the no of channles"\cf4 )\
+        schannels.\cf9 append\cf4 (\cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!)\
+    \}\
+\}\
+\
+\cf5 //finding income for the movie\cf4 \
+
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf6 findIncome\cf4 (mIncome : [\cf7 Double\cf4 ]) \{\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  totalIncome = mIncome.\cf9 reduce\cf4 (\cf8 0\cf4 ,\cf9 +\cf4 )\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  income = totalIncome \cf9 *\cf4  \cf8 0.40\cf4 \
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  finalIncome = totalIncome \cf9 -\cf4  income\
+    \cf9 print\cf4 (\cf10 "The total income for movies is \cf4 \\(finalIncome)\cf10 "\cf4 )\
+\}\
+\
+\cf5 //print out titles and incomes of movies/series transmitted in 2018\cf4 \
+
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf6 find\cf4 (mtitle : [\cf7 String\cf4 ], mIncome : [\cf7 Double\cf4 ],myear : [\cf7 Int\cf4 ], syear : [\cf7 Int\cf4 ], stitle : [\cf7 String\cf4 ]) \{\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  sIncome = \cf8 50000\cf4 \
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  i 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 1\cf4  \{\
+        
+\f0\b \cf2 if
+\f1\b0 \cf4  (myear[i] \cf9 ==\cf4  \cf8 2018\cf4 ) \{\
+            \cf9 print\cf4 (\cf10 "Movies transmitted in the year 2018 are \cf4 \\(mtitle[i])\cf10  and its income \cf4 \\(mIncome[i])\cf10 "\cf4 )\
+        \}\
+    \}\
+    \cf9 print\cf4 (\cf10 "-----------------"\cf4 )\
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  j 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 2\cf4  \{\
+        
+\f0\b \cf2 if
+\f1\b0 \cf4  (syear[j] \cf9 ==\cf4  \cf8 2018\cf4 ) \{\
+            \cf9 print\cf4 (\cf10 "Series transmiited in the year 2018 are \cf4 \\(stitle[j])\cf10  and its income is \cf4 \\(sIncome)\cf10 "\cf4 )\
+        \}\
+    \}\
+\}\
+\
+\cf5 //search the details by movies or series no\cf4 \
+
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf6 searchByName\cf4 (mno : [\cf7 Int\cf4 ], sno : [\cf7 Int\cf4 ], mCinema : [\cf7 String\cf4 ], sepisodes : [\cf7 Int\cf4 ]) \{\
+    \cf5 //movies\cf4 \
+    \cf9 print\cf4 (\cf10 "-------------"\cf4 )\
+    \cf9 print\cf4 (\cf10 "Enter the Movie or Series no"\cf4 )\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  input = \cf7 Int\cf4 (\cf9 readLine\cf4 ()!)!\
+    \
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  i 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 1\cf4 \{\
+        
+\f0\b \cf2 if
+\f1\b0 \cf4  (input \cf9 ==\cf4  mno[i]) \{\
+            \cf9 print\cf4 (\cf10 "This movie is in the following cinemas \cf4 \\(mCinema[i])\cf10 "\cf4 )\
+        \}\
+    \}\
+   \
+    \
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  j 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 2\cf4  \{\
+        
+\f0\b \cf2 if
+\f1\b0 \cf4  (input \cf9 ==\cf4  sno[j]) \{\
+            \cf9 print\cf4 (\cf10 "This series has \cf4 \\(sepisodes[j])\cf10  no of episodes."\cf4 )\
+        \}\
+    \}\
+\}\
+\
+\cf5 //printing our titles of movies on cinema search\cf4 \
+  
+\f0\b \cf2 func
+\f1\b0 \cf4  \cf6 searchCinema\cf4 (mCinema : [\cf7 String\cf4 ], mtitle : [\cf7 String\cf4 ]) \{\
+    \cf9 print\cf4 (\cf10 "Enter the name of the cinema"\cf4 )\
+    
+\f0\b \cf2 let
+\f1\b0 \cf4  cinema = \cf9 readLine\cf4 ()!\
+    
+\f0\b \cf2 for
+\f1\b0 \cf4  i 
+\f0\b \cf2 in
+\f1\b0 \cf4  \cf8 0\cf9 ...\cf8 1\cf4  \{\
+        
+\f0\b \cf2 if
+\f1\b0 \cf4  cinema \cf9 ==\cf4  mCinema[i] \{\
+            \cf5 //print(cinema)\cf4 \
+               \cf9 print\cf4 (\cf10 "Movies in this cinema are \cf4 \\(mtitle)\cf10 "\cf4 )\
+        \}\
+        \cf5 /*for j in 1...1 \{\cf4 \
+\cf5                 if cinema == mCinema[j] \{\cf4 \
+\cf5                     //print(cinema)\cf4 \
+\cf5                        print("Movies in this cinema are \\(mtitle[j])")\cf4 \
+\cf5                 \}\cf4 \
+\cf5         \}*/\cf4 \
+\}\
+    \
+\}\
+\
+\cf5 //create an empty array for movies\cf4 \
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 mno\cf4  = [\cf7 Int\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 myear\cf4  = [\cf7 Int\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 mCinema\cf4  = [\cf7 String\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 mIncome\cf4  = [\cf7 Double\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 mtitle\cf4  = [\cf7 String\cf4 ]()\
+\
+\cf5 //create an empty array for series\cf4 \
+\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 sno\cf4  = [\cf7 Int\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 stitle\cf4  = [\cf7 String\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 syear\cf4  = [\cf7 Int\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 sepisodes\cf4  = [\cf7 Int\cf4 ]()\
+
+\f0\b \cf2 var
+\f1\b0 \cf4  \cf6 schannels\cf4  = [\cf7 Int\cf4 ]()\
+\
+\
+\cf9 print\cf4 (\cf10 "-----------------MOVIES---------------------"\cf4 )\
+\cf11 moviesf\cf4 (mno: &\cf12 mno\cf4 , myear: &\cf12 myear\cf4 , mCinema: &\cf12 mCinema\cf4 , mIncome: &\cf12 mIncome\cf4 , mtitle: &\cf12 mtitle\cf4 )\
+\cf9 print\cf4 (\cf10 "-----------------SERIES---------------------"\cf4 )\
+\cf11 seriesf\cf4 (sno: &\cf12 sno\cf4 , stitle: &\cf12 stitle\cf4 , syear: &\cf12 syear\cf4 , sepisodes: &\cf12 sepisodes\cf4 , schannels: &\cf12 schannels\cf4 )\
+\cf9 print\cf4 (\cf10 "----------------"\cf4 )\
+\cf11 findIncome\cf4 (mIncome: \cf12 mIncome\cf4 )\
+\cf9 print\cf4 (\cf10 "----------------"\cf4 )\
+\cf11 find\cf4 (mtitle: \cf12 mtitle\cf4 , mIncome: \cf12 mIncome\cf4 , myear: \cf12 myear\cf4 , syear: \cf12 syear\cf4 , stitle: \cf12 stitle\cf4 )\
+\cf9 print\cf4 (\cf10 "----------------"\cf4 )\
+\cf11 searchByName\cf4 (mno: \cf12 mno\cf4 , sno: \cf12 sno\cf4 , mCinema: \cf12 mCinema\cf4 , sepisodes: \cf12 sepisodes\cf4  )\
+\cf11 searchCinema\cf4 (mCinema: \cf12 mCinema\cf4 , mtitle: \cf12 mtitle\cf4 )\
+}
