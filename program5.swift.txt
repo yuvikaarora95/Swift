@@ -1,0 +1,155 @@
+
+import Foundation
+
+/*suppose we have 3 salesperson
+
+ we need to enter their names and their sales amount in 12 months for each
+
+ then suppose the target for quarters as follows:
+
+ 1st quarter:230K
+
+ 2nd quarter:170K
+
+ 3rd quarter:300K
+
+ 4th quaretr:280K
+
+ 
+
+ We need to calculate the yearly commission for each salesperson as following: for each other
+
+ if the sales amount >= target the commission = 10%
+
+ if the sales amount >= 75% of target the commission = 7.5%
+
+ if the sales amount >= 50% of target the commission is 5%
+
+ otherwise no commission = 0
+
+ 
+
+ calculate the commission of each sales person for the year
+
+ then print out names of all salesperson and their commissions
+
+ find the quarter (1,2,3,4) when the salespersons hit the target or closest to Use Enum of months*/
+
+
+
+//*************************************************************//
+
+
+
+//function to read the details of the salesperson
+
+func readSalesperson(name : inout [String], sale : inout [Double], n : Int){
+
+    //inout converts constants into variables
+
+    for i in 0..<n {
+
+        print("Enter the name of the salesperson")
+
+        name.append(readLine()!)
+
+        for j in 0..<12 {
+
+            print("Enter the amount of sale for month \(j)")
+
+            sale.append(Double(readLine()!)!)
+
+        }
+
+    }
+
+}
+
+
+
+//validating the sales amount with the quaterly commission
+
+func calculate(sale : [Double], qrtr1 : Double, qrtr2 : Double, qrtr3 : Double, qrtr4 : Double ) {
+
+    //quarter 1
+
+    for i in 0..<3{
+
+        let comm : Double
+
+        let result : Double
+
+        let totalsales = sale.reduce(0,+)
+
+        let rate = (totalsales/qrtr1) * 100
+
+        if totalsales >= qrtr1 {
+
+            comm = 0.10
+
+            result = totalsales * 0.10
+
+        }
+
+        else if rate >= 75 {
+
+            comm = 7.5
+
+            result = totalsales * 0.075
+
+        }
+
+        else if rate >= 50 {
+
+            comm = 5
+
+            result = 0.05
+
+        }
+
+        else {
+
+            print("No commission")
+
+        }
+
+    }
+
+    
+
+}
+
+
+
+enum months : Int {
+
+    case January=1, February, March, April, May, June, July, August, September, October, November, December
+
+}
+
+
+
+var n = 3
+
+var name = [String]()
+
+var sale = [Double]()
+
+
+
+//declaring quarters
+
+let qrtr1 = 230000
+
+let qrtr2 = 170000
+
+let qrtr3 = 300000
+
+let qrtr4 = 280000
+
+
+
+readSalesperson(name: &name, sale: &sale, n: n)
+
+calculate(sale: sale, qrtr1: Double(qrtr1), qrtr2: Double(qrtr2), qrtr3: Double(qrtr3), qrtr4: Double(qrtr4))
+
